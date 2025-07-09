@@ -4,7 +4,7 @@ let r1 = readline.createInterface({
     output: process.stdout
 });
 
-
+// using readline 
 r1.question('Enter 2 number and operaion ' ,(asnwer) => {
     const [astr , bstr , operand] = asnwer.split(' '); 
     var a = Number(astr);
@@ -18,3 +18,8 @@ r1.question('Enter 2 number and operaion ' ,(asnwer) => {
     }    
     r1.close();
 });
+
+// using process.argv
+const args = process.argv.slice('2').map(Number);
+const [a, b ] = args ; 
+console.log(a +b );
